@@ -9,4 +9,6 @@ for (let i=0; i < listaSpesa.length; i++) {
     const li = document.createElement("li");
     li.textContent = listaSpesa[i];
     output.appendChild(li);
+    //creare una barr per inserire nuovi elemnti alla lista
+    const inputElementList = document.querySelector("input#inputKm");
 }
