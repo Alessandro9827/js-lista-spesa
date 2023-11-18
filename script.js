@@ -3,12 +3,22 @@
 
 const listaSpesa = ["Pasta", "Sugo", "Latte", "Caffè", "Fazzoletti", "Detersivo"];
 
+const inputListaSpesa = document.querySelector("input#listaSpesa");
+const addButoon = document.querySelector("button");
+
+addButoon.addEventListener("click", function() {
+    listaSpesa.push(inputListaSpesa);
+})
+
 const output = document.getElementById("output");
 
-for (let i=0; i < listaSpesa.length; i++) {
+let i = 0;
+while (i < listaSpesa.length) {
     const li = document.createElement("li");
     li.textContent = listaSpesa[i];
     output.appendChild(li);
-    //creare una barr per inserire nuovi elemnti alla lista
-    const inputElementList = document.querySelector("input#inputKm");
+    i++;
 }
+
+
+ console.log(listaSpesa);
